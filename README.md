@@ -6,7 +6,9 @@ Factortime is a small c prgram in homage to [xkcd 247](https://xkcd.com/247) "Fa
 Building
 --------
 
-Just run `./build.sh`. It invokes `gcc` or the compiler under `$CC` if given, as well as a script to generate the `primes.h` header.
+Run `make` followed by `make install`.
+
+Makefile supports DESTDIR, PREFIX, and CC variables.
 
 Running
 -------
