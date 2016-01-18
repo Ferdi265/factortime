@@ -1,4 +1,5 @@
 CC=gcc
+DESTDIR=/
 PREFIX=/usr
 
 all: factortime
@@ -13,7 +14,8 @@ factortime: primes_h
 	$(CC) -o factortime factortime.c
 
 install:
-	install -s factortime $(PREFIX)/bin/
+	mkdir -p $(DESTDIR)/$(PREFIX)/bin/
+	install -s factortime $(DESTDIR)/$(PREFIX)/bin/
 
 clean:
 	rm primes.h genprimes factortime
