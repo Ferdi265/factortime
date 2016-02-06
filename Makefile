@@ -6,12 +6,14 @@ all: factortime
 
 genprimes:
 	$(CC) -o genprimes genprimes.c
+	strip genprimes
 
 primes_h: genprimes
 	./primes_h.sh
 
 factortime: primes_h
 	$(CC) -o factortime factortime.c
+	strip factortime
 
 install:
 	mkdir -p $(DESTDIR)/$(PREFIX)/bin/
