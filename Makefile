@@ -8,10 +8,10 @@ genprimes:
 	$(CC) -o genprimes genprimes.c
 	strip genprimes
 
-primes_h: genprimes
+primes.h: genprimes
 	./primes_h.sh
 
-factortime: primes_h
+factortime: primes.h
 	$(CC) -o factortime factortime.c
 	strip factortime
 
